@@ -22,8 +22,10 @@ jobs:
       - name: Show branch name
         run: echo "Current branch: ${{ github.ref_name }}"
 
-      - name: List repository files
-        run: ls -la
+      - name: List files in the repository
+        run: |
+          echo "The repository ${{ github.repository }} contains the following files:"
+          tree
       
   
       
